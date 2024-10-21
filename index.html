@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Tailwind CSS configuration if needed */
+  </style>
+</head>
+<body class="bg-gray-200 min-h-screen flex items-center justify-center">
+
+  <!-- Main Container -->
+  <div class="w-full max-w-lg bg-white shadow-lg rounded-lg p-6 space-y-6">
+    <h1 class="text-3xl font-bold text-center text-gray-800">Weather Forecast</h1>
+
+    <!-- Search Input -->
+    <div class="flex">
+      <input type="text" id="city-input" class="flex-grow p-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring focus:border-blue-300" placeholder="Enter city name">
+      <button id="search-btn" class="bg-blue-500 text-white p-3 rounded-r-lg hover:bg-blue-700 transition-colors">Search</button>
+    </div>
+
+    <!-- Current Location Button -->
+    <button id="current-location-btn" class="w-full bg-green-500 text-white p-3 rounded-lg hover:bg-green-700 transition-colors">Use Current Location</button>
+
+    <!-- Weather Display Container -->
+    <div id="weather-container" class="mt-6 space-y-6">
+      <!-- Current Weather -->
+      <div id="current-weather" class="text-center text-gray-700"></div>
+
+      <!-- 5-day Forecast -->
+      <div id="forecast" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
